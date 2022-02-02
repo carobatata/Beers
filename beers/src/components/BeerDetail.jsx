@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import s from './BeerDetail.module.css'
+import Nav from './Nav';
+import { Link } from 'react-router-dom';
 const axios = require('axios');
 
 async function getBeer(id){
@@ -28,8 +30,29 @@ function BeerDetail() {
     if(beer){
         return (
           <div className={s.container}>
-              <span>{beer.name}</span>
-              <span>{beer.tagline}</span>
+              <Nav/>
+              <Link to='/' className={s.link}>
+                        <button className={s.button}>Go Back!</button>
+                    </Link>
+              <div className={s.allInfo}>
+                <p className={s.title}>{beer.name}</p>
+                <p className={s.tag}>{beer.tagline}</p>
+                <div className={s.imgTags}> 
+                    <img src={beer.image_url} alt="BeerImage" className={s.img}/>
+                    <div className={s.tags}>
+                        <div className={s.tagsDiv}>
+                            <p className={s.info}>ABV: {beer.abv}</p>
+                            <p className={s.info}>IBU: {beer.ibu}</p>
+                            <p className={s.info}>PH: {beer.ph}</p>
+                        </div>
+                        <div className={s.tagsDiv}>
+                            <p className={s.info}>Attenuation Level: {beer.attenuation_level}</p>
+                        </div>
+                        <p className={s.info}>Yeast: {beer.ingredients.yeast}</p>
+                    </div>
+                </div>
+                <p className={s.description}>{beer.description}</p>
+              </div>
           </div>
         );
     }
