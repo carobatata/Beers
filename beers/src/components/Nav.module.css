@@ -1,0 +1,21 @@
+.img{
+    width: 100px;
+    margin-left: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #30475E;
+    }
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 20px;
+    color: #F5F5F5;
+    font-style: italic;
+}

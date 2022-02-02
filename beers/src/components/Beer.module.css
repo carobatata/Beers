@@ -1,0 +1,56 @@
+.container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background-color: #F05454;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.img {
+    height: 100px;
+    width: 30px;
+    margin-left: 7px;
+}
+
+.fullName{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: small;
+}
+
+.flexItem{
+    display: flex;
+}
+
+.abvIbu{
+    display: flex;
+    align-self: center;
+}
+
+.item{
+    background-color: #F5F5F5;
+    color: #F05454;
+    border-radius: 6px;
+    padding: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.tag{
+    font-style: italic;
+    align-self: center;
+}
+
+.title{
+    font-weight: 600;
+    align-self: center;
+    font-size: 18px;
+}
+
+.moreDetails {
+    align-self: center;
+    color: #121212;
+}
