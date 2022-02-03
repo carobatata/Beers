@@ -21,11 +21,13 @@ function BeerDetail() {
 
     const [beer, setBeer] = useState(null);
 
-    useEffect(async () => {
-        const aBeer = await getBeer(id);
-        console.log(aBeer)
-        setBeer(aBeer);
-      }, []);
+    useEffect(() => {
+    getBeer(id)
+    .then((response) => {
+        setBeer(response)
+     })
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+        
 
     if(beer){
         return (
@@ -38,7 +40,6 @@ function BeerDetail() {
                 <p className={s.title}>{beer.name}</p>
                 <p className={s.tag}>{beer.tagline}</p>
                 <div className={s.imgTags}> 
-                    <img src={beer.image_url} alt="BeerImage" className={s.img}/>
                     <div className={s.tags}>
                         <div className={s.tagsDiv}>
                             <p className={s.info}>ABV: {beer.abv}</p>
@@ -50,6 +51,7 @@ function BeerDetail() {
                         </div>
                         <p className={s.info}>Yeast: {beer.ingredients.yeast}</p>
                     </div>
+                    <img src={beer.image_url} alt="BeerImage" className={s.img}/>
                 </div>
                 <p className={s.description}>{beer.description}</p>
               </div>
@@ -64,3 +66,9 @@ function BeerDetail() {
   }
   
   export default BeerDetail;
+
+
+    // useEffect(async () => {
+    //     const aBeer = await getBeer(id);
+    //     setBeer(aBeer);
+    //   }, []); // eslint-disable-line react-hooks/exhaustive-deps
