@@ -8,18 +8,15 @@ All Abour Beers is a website about characteritics of beers. The website consists
 # Built with
 HTML CSS JavaScript React 
 
-# Starting
-What do you need to install the software?
+# Prerequisites
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-You need to have installed Node JS
+# Starting
+What do you need to install the software? 
 
 1- Download this repository in zip or clone the repository on your device. 
 2.- Open a terminal in the root folder of your repository. 
-3.- Install React
--g create-react-app
-4.- Install the local dependencies by running the command in the terminal:
-
-npm install
+3.- Install the local dependencies by running the command in the terminal: npm install
 
 # Starting the project
 Once you have done the previous step, start the project every time you program. To do this, run the command:
